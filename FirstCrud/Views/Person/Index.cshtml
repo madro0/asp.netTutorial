@@ -1,0 +1,22 @@
+﻿@model FirstCrud.Models.PersonModel
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "Person", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.TextBoxFor(k => k.Id, new { @class = "w3-input w3-animate-input" })
+        @Html.LabelFor(k => k.Id)
+    </div>
+
+    <div class="form-group">
+        @Html.TextBoxFor(k => k.Name, new { @class = "w3-input w3-animate-input" })
+        @Html.LabelFor(k => k.Name)
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-success" type="submit">Create</button>
+    </div>
+}
+

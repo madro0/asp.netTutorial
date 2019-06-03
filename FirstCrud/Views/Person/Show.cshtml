@@ -1,0 +1,30 @@
+﻿@model FirstCrud.Models.PersonModel
+    @{
+        ViewBag.Title = "Show";
+    }
+
+    <h2>Person</h2>
+    <table class="w3-table-all w3-hoverable">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Lista)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(m => item.Id)</td>
+                    <td>@Html.DisplayFor(m => item.Name)</td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+
